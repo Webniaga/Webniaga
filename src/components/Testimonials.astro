@@ -1,103 +1,136 @@
 ---
 ---
 
-<section id="testimonials" class="py-20 bg-primary-700 text-white relative overflow-hidden">
-  <!-- Background decoration -->
+<section id="testimonials" class="py-24 bg-gradient-to-br from-primary-600 to-primary-800 text-white relative overflow-hidden">
+  <!-- Background Elements -->
   <div class="absolute inset-0 opacity-10">
-    <svg xmlns="http://www.w3.org/2000/svg" width="100%" height="100%">
-      <defs>
-        <pattern id="testimonials-pattern" width="60" height="60" patternUnits="userSpaceOnUse">
-          <path d="M50 10 L10 10 L10 50" fill="none" stroke="white" stroke-width="1"/>
-        </pattern>
-      </defs>
-      <rect width="100%" height="100%" fill="url(#testimonials-pattern)" />
-    </svg>
+    <div class="absolute top-20 left-10 w-32 h-32 bg-white rounded-full"></div>
+    <div class="absolute bottom-20 right-10 w-24 h-24 bg-white rounded-full"></div>
+    <div class="absolute top-1/2 left-1/4 w-16 h-16 bg-white rounded-full"></div>
   </div>
   
   <div class="container mx-auto px-4 relative z-10">
     <div class="text-center mb-16">
-      <h2 class="text-3xl md:text-4xl font-bold font-heading mb-4">Apa Kata Pelanggan?</h2>
-      <div class="w-24 h-1 bg-white mx-auto mb-6"></div>
-      <p class="text-lg text-primary-100 max-w-2xl mx-auto">Lihat bagaimana perkhidmatan kami telah membantu perniagaan lain mencapai kejayaan dalam talian.</p>
+      <div class="inline-flex items-center bg-white/10 text-white px-4 py-2 rounded-full text-sm font-medium mb-4">
+        <svg class="w-4 h-4 mr-2" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+          <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M8 12h.01M12 12h.01M16 12h.01M21 12c0 4.418-4.03 8-9 8a9.863 9.863 0 01-4.255-.949L3 20l1.395-3.72C3.512 15.042 3 13.574 3 12c0-4.418 4.03-8 9-8s9 3.582 9 8z"></path>
+        </svg>
+        Testimoni Pelanggan
+      </div>
+      <h2 class="text-3xl md:text-4xl lg:text-5xl font-bold mb-6">
+        Apa Kata <span class="text-primary-200">Pelanggan Kami</span>?
+      </h2>
+      <p class="text-xl text-primary-100 max-w-3xl mx-auto leading-relaxed">
+        Lihat bagaimana perkhidmatan kami telah membantu perniagaan lain mencapai kejayaan dalam talian.
+      </p>
     </div>
     
-    <div class="max-w-5xl mx-auto">
+    <div class="max-w-6xl mx-auto">
       <div class="grid md:grid-cols-2 gap-8">
         <!-- Testimonial 1 -->
-        <div class="bg-primary-800 rounded-lg p-8 shadow-lg border border-primary-600 relative hover:scale-105 transition-transform duration-300">
-          <div class="absolute -top-4 left-8 text-5xl text-primary-400 opacity-50">"</div>
-          <p class="text-lg mb-6 relative z-10">Sangat puas hati! Website siap cepat, cantik dan saya tak perlu keluar duit awal. Proses tempahan pun sangat mudah.</p>
-          <div class="flex items-center">
-            <div class="mr-4">
-              <div class="w-12 h-12 bg-primary-100 rounded-full flex items-center justify-center text-primary-800 font-bold text-xl">
-                A
-              </div>
+        <div class="group bg-white/10 backdrop-blur-sm rounded-3xl p-8 border border-white/20 hover:bg-white/15 transition-all duration-300 hover:-translate-y-2">
+          <div class="flex items-center mb-6">
+            <div class="w-12 h-12 bg-gradient-to-br from-primary-300 to-primary-400 rounded-full flex items-center justify-center text-primary-800 font-bold text-xl mr-4">
+              A
             </div>
             <div>
-              <h4 class="font-bold">Puan Aisyah</h4>
-              <p class="text-primary-300 text-sm">Usahawan Makanan</p>
+              <h4 class="font-bold text-lg">Puan Aisyah</h4>
+              <p class="text-primary-200 text-sm">Usahawan Makanan</p>
             </div>
+          </div>
+          <div class="relative">
+            <svg class="absolute -top-2 -left-2 w-8 h-8 text-primary-300 opacity-50" fill="currentColor" viewBox="0 0 24 24">
+              <path d="M14.017 21v-7.391c0-5.704 3.731-9.57 8.983-10.609l.995 2.151c-2.432.917-3.995 3.638-3.995 5.849h4v10h-9.983zm-14.017 0v-7.391c0-5.704 3.748-9.57 9-10.609l.996 2.151c-2.433.917-3.996 3.638-3.996 5.849h4v10h-10z"/>
+            </svg>
+            <p class="text-lg leading-relaxed relative z-10 pl-6">
+              Sangat puas hati! Website siap cepat, cantik dan saya tak perlu keluar duit awal. Proses tempahan pun sangat mudah dan team sangat membantu.
+            </p>
           </div>
         </div>
         
         <!-- Testimonial 2 -->
-        <div class="bg-primary-800 rounded-lg p-8 shadow-lg border border-primary-600 relative hover:scale-105 transition-transform duration-300">
-          <div class="absolute -top-4 left-8 text-5xl text-primary-400 opacity-50">"</div>
-          <p class="text-lg mb-6 relative z-10">Mudah, cepat dan mesra bajet. Sangat disyorkan untuk bisnes kecil. Pelanggan saya juga senang untuk hubungi saya melalui website.</p>
-          <div class="flex items-center">
-            <div class="mr-4">
-              <div class="w-12 h-12 bg-primary-100 rounded-full flex items-center justify-center text-primary-800 font-bold text-xl">
-                F
-              </div>
+        <div class="group bg-white/10 backdrop-blur-sm rounded-3xl p-8 border border-white/20 hover:bg-white/15 transition-all duration-300 hover:-translate-y-2">
+          <div class="flex items-center mb-6">
+            <div class="w-12 h-12 bg-gradient-to-br from-secondary-300 to-secondary-400 rounded-full flex items-center justify-center text-secondary-800 font-bold text-xl mr-4">
+              F
             </div>
             <div>
-              <h4 class="font-bold">Encik Faizal</h4>
-              <p class="text-primary-300 text-sm">Pemilik Kedai Online</p>
+              <h4 class="font-bold text-lg">Encik Faizal</h4>
+              <p class="text-primary-200 text-sm">Pemilik Kedai Online</p>
             </div>
+          </div>
+          <div class="relative">
+            <svg class="absolute -top-2 -left-2 w-8 h-8 text-primary-300 opacity-50" fill="currentColor" viewBox="0 0 24 24">
+              <path d="M14.017 21v-7.391c0-5.704 3.731-9.57 8.983-10.609l.995 2.151c-2.432.917-3.995 3.638-3.995 5.849h4v10h-9.983zm-14.017 0v-7.391c0-5.704 3.748-9.57 9-10.609l.996 2.151c-2.433.917-3.996 3.638-3.996 5.849h4v10h-10z"/>
+            </svg>
+            <p class="text-lg leading-relaxed relative z-10 pl-6">
+              Mudah, cepat dan mesra bajet. Sangat disyorkan untuk bisnes kecil. Pelanggan saya juga senang untuk hubungi saya melalui website.
+            </p>
           </div>
         </div>
         
         <!-- Testimonial 3 -->
-        <div class="bg-primary-800 rounded-lg p-8 shadow-lg border border-primary-600 relative hover:scale-105 transition-transform duration-300">
-          <div class="absolute -top-4 left-8 text-5xl text-primary-400 opacity-50">"</div>
-          <p class="text-lg mb-6 relative z-10">Design yang diberikan sangat profesional, melebihi jangkaan saya. Perkhidmatan yang berbaloi dengan harga yang ditawarkan.</p>
-          <div class="flex items-center">
-            <div class="mr-4">
-              <div class="w-12 h-12 bg-primary-100 rounded-full flex items-center justify-center text-primary-800 font-bold text-xl">
-                N
-              </div>
+        <div class="group bg-white/10 backdrop-blur-sm rounded-3xl p-8 border border-white/20 hover:bg-white/15 transition-all duration-300 hover:-translate-y-2">
+          <div class="flex items-center mb-6">
+            <div class="w-12 h-12 bg-gradient-to-br from-accent-300 to-accent-400 rounded-full flex items-center justify-center text-accent-800 font-bold text-xl mr-4">
+              N
             </div>
             <div>
-              <h4 class="font-bold">Puan Nurul</h4>
-              <p class="text-primary-300 text-sm">Pemilik Butik</p>
+              <h4 class="font-bold text-lg">Puan Nurul</h4>
+              <p class="text-primary-200 text-sm">Pemilik Butik</p>
             </div>
+          </div>
+          <div class="relative">
+            <svg class="absolute -top-2 -left-2 w-8 h-8 text-primary-300 opacity-50" fill="currentColor" viewBox="0 0 24 24">
+              <path d="M14.017 21v-7.391c0-5.704 3.731-9.57 8.983-10.609l.995 2.151c-2.432.917-3.995 3.638-3.995 5.849h4v10h-9.983zm-14.017 0v-7.391c0-5.704 3.748-9.57 9-10.609l.996 2.151c-2.433.917-3.996 3.638-3.996 5.849h4v10h-10z"/>
+            </svg>
+            <p class="text-lg leading-relaxed relative z-10 pl-6">
+              Design yang diberikan sangat profesional, melebihi jangkaan saya. Perkhidmatan yang berbaloi dengan harga yang ditawarkan.
+            </p>
           </div>
         </div>
         
         <!-- Testimonial 4 -->
-        <div class="bg-primary-800 rounded-lg p-8 shadow-lg border border-primary-600 relative hover:scale-105 transition-transform duration-300">
-          <div class="absolute -top-4 left-8 text-5xl text-primary-400 opacity-50">"</div>
-          <p class="text-lg mb-6 relative z-10">Sebagai NGO, kami sangat menghargai perkhidmatan yang berpatutan. Website kami kini lebih profesional dan mudah untuk dikemaskini.</p>
-          <div class="flex items-center">
-            <div class="mr-4">
-              <div class="w-12 h-12 bg-primary-100 rounded-full flex items-center justify-center text-primary-800 font-bold text-xl">
-                Z
-              </div>
+        <div class="group bg-white/10 backdrop-blur-sm rounded-3xl p-8 border border-white/20 hover:bg-white/15 transition-all duration-300 hover:-translate-y-2">
+          <div class="flex items-center mb-6">
+            <div class="w-12 h-12 bg-gradient-to-br from-green-300 to-green-400 rounded-full flex items-center justify-center text-green-800 font-bold text-xl mr-4">
+              Z
             </div>
             <div>
-              <h4 class="font-bold">Encik Zulkifli</h4>
-              <p class="text-primary-300 text-sm">Pengerusi NGO</p>
+              <h4 class="font-bold text-lg">Encik Zulkifli</h4>
+              <p class="text-primary-200 text-sm">Pengerusi NGO</p>
             </div>
+          </div>
+          <div class="relative">
+            <svg class="absolute -top-2 -left-2 w-8 h-8 text-primary-300 opacity-50" fill="currentColor" viewBox="0 0 24 24">
+              <path d="M14.017 21v-7.391c0-5.704 3.731-9.57 8.983-10.609l.995 2.151c-2.432.917-3.995 3.638-3.995 5.849h4v10h-9.983zm-14.017 0v-7.391c0-5.704 3.748-9.57 9-10.609l.996 2.151c-2.433.917-3.996 3.638-3.996 5.849h4v10h-10z"/>
+            </svg>
+            <p class="text-lg leading-relaxed relative z-10 pl-6">
+              Sebagai NGO, kami sangat menghargai perkhidmatan yang berpatutan. Website kami kini lebih profesional dan mudah untuk dikemaskini.
+            </p>
           </div>
         </div>
       </div>
+      
+      <!-- Stats -->
+      <div class="grid grid-cols-2 md:grid-cols-4 gap-8 mt-16 pt-16 border-t border-white/20">
+        <div class="text-center">
+          <div class="text-3xl md:text-4xl font-bold mb-2">500+</div>
+          <div class="text-primary-200">Pelanggan Puas Hati</div>
+        </div>
+        <div class="text-center">
+          <div class="text-3xl md:text-4xl font-bold mb-2">98%</div>
+          <div class="text-primary-200">Rating Kepuasan</div>
+        </div>
+        <div class="text-center">
+          <div class="text-3xl md:text-4xl font-bold mb-2">3-5</div>
+          <div class="text-primary-200">Hari Siap</div>
+        </div>
+        <div class="text-center">
+          <div class="text-3xl md:text-4xl font-bold mb-2">24/7</div>
+          <div class="text-primary-200">Sokongan</div>
+        </div>
+      </div>
     </div>
-  </div>
-  
-  <!-- Curved shape divider -->
-  <div class="absolute bottom-0 left-0 w-full overflow-hidden">
-    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 120" preserveAspectRatio="none" class="w-full h-16 md:h-24">
-      <path d="M0,0V46.29c47.79,22.2,103.59,32.17,158,28,70.36-5.37,136.33-33.31,206.8-37.5C438.64,32.43,512.34,53.67,583,72.05c69.27,18,138.3,24.88,209.4,13.08,36.15-6,69.85-17.84,104.45-29.34C989.49,25,1113-14.29,1200,52.47V0Z" fill="white" opacity="1"></path>
-    </svg>
   </div>
 </section>

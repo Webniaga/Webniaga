@@ -1,48 +1,93 @@
 ---
 ---
 
-<header class="fixed top-0 left-0 w-full z-50 py-4 bg-primary-700 shadow-lg transition-all duration-300">
-  <div class="container mx-auto px-4 flex justify-between items-center">
-    <a href="#" class="text-white font-bold text-2xl font-heading">
-      Webniaga<span class="text-primary-300">.my</span>
-    </a>
-    
-    <nav class="hidden md:block">
-      <ul class="flex space-x-8">
-        <li><a href="#features" class="text-white hover:text-primary-300 transition-colors duration-200">Ciri-ciri</a></li>
-        <li><a href="#benefits" class="text-white hover:text-primary-300 transition-colors duration-200">Kelebihan</a></li>
-        <li><a href="#portfolio" class="text-white hover:text-primary-300 transition-colors duration-200">Portfolio</a></li>
-        <li><a href="#testimonials" class="text-white hover:text-primary-300 transition-colors duration-200">Testimoni</a></li>
-        <li><a href="#faq" class="text-white hover:text-primary-300 transition-colors duration-200">FAQ</a></li>
-        <li><a href="#contact" class="text-white hover:text-primary-300 transition-colors duration-200">Hubungi Kami</a></li>
-      </ul>
-    </nav>
-    
-    <button id="mobileMenuBtn" class="md:hidden text-white focus:outline-none">
-      <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16" />
-      </svg>
-    </button>
+<header class="fixed top-0 left-0 w-full z-50 bg-white/95 backdrop-blur-md border-b border-gray-100 transition-all duration-300">
+  <div class="container mx-auto px-4">
+    <div class="flex justify-between items-center h-20">
+      <a href="#" class="flex items-center space-x-2">
+        <div class="w-10 h-10 bg-gradient-to-br from-primary-500 to-primary-600 rounded-xl flex items-center justify-center">
+          <span class="text-white font-bold text-lg">W</span>
+        </div>
+        <span class="text-2xl font-bold text-gray-900">
+          Webniaga<span class="text-primary-600">.my</span>
+        </span>
+      </a>
+      
+      <nav class="hidden lg:block">
+        <ul class="flex space-x-8">
+          <li><a href="#features" class="text-gray-700 hover:text-primary-600 font-medium transition-colors duration-200 relative group">
+            Ciri-ciri
+            <span class="absolute -bottom-1 left-0 w-0 h-0.5 bg-primary-600 transition-all duration-200 group-hover:w-full"></span>
+          </a></li>
+          <li><a href="#benefits" class="text-gray-700 hover:text-primary-600 font-medium transition-colors duration-200 relative group">
+            Kelebihan
+            <span class="absolute -bottom-1 left-0 w-0 h-0.5 bg-primary-600 transition-all duration-200 group-hover:w-full"></span>
+          </a></li>
+          <li><a href="#portfolio" class="text-gray-700 hover:text-primary-600 font-medium transition-colors duration-200 relative group">
+            Portfolio
+            <span class="absolute -bottom-1 left-0 w-0 h-0.5 bg-primary-600 transition-all duration-200 group-hover:w-full"></span>
+          </a></li>
+          <li><a href="#testimonials" class="text-gray-700 hover:text-primary-600 font-medium transition-colors duration-200 relative group">
+            Testimoni
+            <span class="absolute -bottom-1 left-0 w-0 h-0.5 bg-primary-600 transition-all duration-200 group-hover:w-full"></span>
+          </a></li>
+          <li><a href="#faq" class="text-gray-700 hover:text-primary-600 font-medium transition-colors duration-200 relative group">
+            FAQ
+            <span class="absolute -bottom-1 left-0 w-0 h-0.5 bg-primary-600 transition-all duration-200 group-hover:w-full"></span>
+          </a></li>
+        </ul>
+      </nav>
+      
+      <div class="flex items-center space-x-4">
+        <a href="#contact" class="hidden md:inline-flex items-center bg-primary-600 text-white font-semibold py-2.5 px-6 rounded-full hover:bg-primary-700 transition-all duration-200 hover:scale-105 transform shadow-lg">
+          Hubungi Kami
+        </a>
+        
+        <button id="mobileMenuBtn" class="lg:hidden p-2 text-gray-700 hover:text-primary-600 focus:outline-none">
+          <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16" />
+          </svg>
+        </button>
+      </div>
+    </div>
   </div>
   
   <!-- Mobile menu -->
-  <div id="mobileMenu" class="fixed inset-0 bg-primary-900 bg-opacity-95 z-50 flex flex-col justify-center items-center hidden transition-all duration-300 ease-in-out">
-    <button id="mobileMenuCloseBtn" class="absolute top-5 right-5 text-white">
-      <svg xmlns="http://www.w3.org/2000/svg" class="h-8 w-8" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M6 18L18 6M6 6l12 12" />
-      </svg>
-    </button>
-    
-    <nav>
-      <ul class="flex flex-col space-y-6 text-center">
-        <li><a href="#features" class="text-white text-2xl hover:text-primary-300 transition-colors duration-200">Ciri-ciri</a></li>
-        <li><a href="#benefits" class="text-white text-2xl hover:text-primary-300 transition-colors duration-200">Kelebihan</a></li>
-        <li><a href="#portfolio" class="text-white text-2xl hover:text-primary-300 transition-colors duration-200">Portfolio</a></li>
-        <li><a href="#testimonials" class="text-white text-2xl hover:text-primary-300 transition-colors duration-200">Testimoni</a></li>
-        <li><a href="#faq" class="text-white text-2xl hover:text-primary-300 transition-colors duration-200">FAQ</a></li>
-        <li><a href="#contact" class="text-white text-2xl hover:text-primary-300 transition-colors duration-200">Hubungi Kami</a></li>
-      </ul>
-    </nav>
+  <div id="mobileMenu" class="fixed inset-0 bg-white z-50 transform translate-x-full transition-transform duration-300 ease-in-out lg:hidden">
+    <div class="flex flex-col h-full">
+      <div class="flex justify-between items-center p-4 border-b border-gray-100">
+        <div class="flex items-center space-x-2">
+          <div class="w-8 h-8 bg-gradient-to-br from-primary-500 to-primary-600 rounded-lg flex items-center justify-center">
+            <span class="text-white font-bold">W</span>
+          </div>
+          <span class="text-xl font-bold text-gray-900">
+            Webniaga<span class="text-primary-600">.my</span>
+          </span>
+        </div>
+        <button id="mobileMenuCloseBtn" class="p-2 text-gray-700 hover:text-primary-600">
+          <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M6 18L18 6M6 6l12 12" />
+          </svg>
+        </button>
+      </div>
+      
+      <nav class="flex-1 px-4 py-8">
+        <ul class="space-y-6">
+          <li><a href="#features" class="block text-lg font-medium text-gray-700 hover:text-primary-600 transition-colors duration-200 py-2">Ciri-ciri</a></li>
+          <li><a href="#benefits" class="block text-lg font-medium text-gray-700 hover:text-primary-600 transition-colors duration-200 py-2">Kelebihan</a></li>
+          <li><a href="#portfolio" class="block text-lg font-medium text-gray-700 hover:text-primary-600 transition-colors duration-200 py-2">Portfolio</a></li>
+          <li><a href="#testimonials" class="block text-lg font-medium text-gray-700 hover:text-primary-600 transition-colors duration-200 py-2">Testimoni</a></li>
+          <li><a href="#faq" class="block text-lg font-medium text-gray-700 hover:text-primary-600 transition-colors duration-200 py-2">FAQ</a></li>
+          <li><a href="#contact" class="block text-lg font-medium text-gray-700 hover:text-primary-600 transition-colors duration-200 py-2">Hubungi Kami</a></li>
+        </ul>
+      </nav>
+      
+      <div class="p-4 border-t border-gray-100">
+        <a href="#contact" class="w-full inline-flex items-center justify-center bg-primary-600 text-white font-semibold py-3 px-6 rounded-full hover:bg-primary-700 transition-colors duration-200">
+          Tempah Sekarang
+        </a>
+      </div>
+    </div>
   </div>
 </header>
 
@@ -51,60 +96,30 @@
   const mobileMenuCloseBtn = document.getElementById('mobileMenuCloseBtn');
   const mobileMenu = document.getElementById('mobileMenu');
   const mobileMenuLinks = document.querySelectorAll('#mobileMenu a');
-  const header = document.querySelector('header');
   
   // Handle mobile menu
   mobileMenuBtn.addEventListener('click', () => {
-    mobileMenu.classList.remove('hidden');
+    mobileMenu.classList.remove('translate-x-full');
     document.body.style.overflow = 'hidden';
   });
   
   mobileMenuCloseBtn.addEventListener('click', () => {
-    mobileMenu.classList.add('hidden');
+    mobileMenu.classList.add('translate-x-full');
     document.body.style.overflow = 'auto';
   });
   
   mobileMenuLinks.forEach(link => {
     link.addEventListener('click', () => {
-      mobileMenu.classList.add('hidden');
+      mobileMenu.classList.add('translate-x-full');
       document.body.style.overflow = 'auto';
     });
   });
 
-  // Handle header background on scroll
-  let lastScroll = 0;
-  window.addEventListener('scroll', () => {
-    const currentScroll = window.pageYOffset;
-    
-    if (currentScroll <= 0) {
-      header.classList.remove('py-2');
-      header.classList.add('py-4');
-    } else {
-      header.classList.add('py-2');
-      header.classList.remove('py-4');
+  // Close mobile menu on outside click
+  mobileMenu.addEventListener('click', (e) => {
+    if (e.target === mobileMenu) {
+      mobileMenu.classList.add('translate-x-full');
+      document.body.style.overflow = 'auto';
     }
-    
-    lastScroll = currentScroll;
-  });
-
-  // Smooth scroll for navigation links with offset for fixed header
-  document.querySelectorAll('a[href^="#"]').forEach(anchor => {
-    anchor.addEventListener('click', function (e) {
-      e.preventDefault();
-      
-      const targetId = this.getAttribute('href');
-      if (targetId === '#') return;
-      
-      const targetElement = document.querySelector(targetId);
-      if (targetElement) {
-        const headerHeight = header.offsetHeight;
-        const targetPosition = targetElement.offsetTop - headerHeight - 20; // 20px extra padding
-        
-        window.scrollTo({
-          top: targetPosition,
-          behavior: 'smooth'
-        });
-      }
-    });
   });
 </script>
