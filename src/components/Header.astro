@@ -12,7 +12,7 @@
         <li><a href="#features" class="text-white hover:text-primary-300 transition-colors duration-200">Ciri-ciri</a></li>
         <li><a href="#benefits" class="text-white hover:text-primary-300 transition-colors duration-200">Kelebihan</a></li>
         <li><a href="#testimonials" class="text-white hover:text-primary-300 transition-colors duration-200">Testimoni</a></li>
-        <li><a href="#faq" class="text-white hover:text-primary-300 transition-colors duration-200">Soalan Lazim</a></li>
+        <li><a href="#faq" class="text-white hover:text-primary-300 transition-colors duration-200">FAQ</a></li>
         <li><a href="#contact" class="text-white hover:text-primary-300 transition-colors duration-200">Hubungi Kami</a></li>
       </ul>
     </nav>
@@ -37,7 +37,7 @@
         <li><a href="#features" class="text-white text-2xl hover:text-primary-300 transition-colors duration-200">Ciri-ciri</a></li>
         <li><a href="#benefits" class="text-white text-2xl hover:text-primary-300 transition-colors duration-200">Kelebihan</a></li>
         <li><a href="#testimonials" class="text-white text-2xl hover:text-primary-300 transition-colors duration-200">Testimoni</a></li>
-        <li><a href="#faq" class="text-white text-2xl hover:text-primary-300 transition-colors duration-200">Soalan Lazim</a></li>
+        <li><a href="#faq" class="text-white text-2xl hover:text-primary-300 transition-colors duration-200">FAQ</a></li>
         <li><a href="#contact" class="text-white text-2xl hover:text-primary-300 transition-colors duration-200">Hubungi Kami</a></li>
       </ul>
     </nav>
@@ -83,5 +83,26 @@
     }
     
     lastScroll = currentScroll;
+  });
+
+  // Smooth scroll for navigation links with offset for fixed header
+  document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+    anchor.addEventListener('click', function (e) {
+      e.preventDefault();
+      
+      const targetId = this.getAttribute('href');
+      if (targetId === '#') return;
+      
+      const targetElement = document.querySelector(targetId);
+      if (targetElement) {
+        const headerHeight = header.offsetHeight;
+        const targetPosition = targetElement.offsetTop - headerHeight - 20; // 20px extra padding
+        
+        window.scrollTo({
+          top: targetPosition,
+          behavior: 'smooth'
+        });
+      }
+    });
   });
 </script>
