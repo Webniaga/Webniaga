@@ -1,0 +1,87 @@
+---
+---
+
+<header class="fixed top-0 left-0 w-full z-50 py-4 bg-primary-700 shadow-lg transition-all duration-300">
+  <div class="container mx-auto px-4 flex justify-between items-center">
+    <a href="#" class="text-white font-bold text-2xl font-heading">
+      Webniaga<span class="text-primary-300">.my</span>
+    </a>
+    
+    <nav class="hidden md:block">
+      <ul class="flex space-x-8">
+        <li><a href="#features" class="text-white hover:text-primary-300 transition-colors duration-200">Ciri-ciri</a></li>
+        <li><a href="#benefits" class="text-white hover:text-primary-300 transition-colors duration-200">Kelebihan</a></li>
+        <li><a href="#testimonials" class="text-white hover:text-primary-300 transition-colors duration-200">Testimoni</a></li>
+        <li><a href="#faq" class="text-white hover:text-primary-300 transition-colors duration-200">Soalan Lazim</a></li>
+        <li><a href="#contact" class="text-white hover:text-primary-300 transition-colors duration-200">Hubungi Kami</a></li>
+      </ul>
+    </nav>
+    
+    <button id="mobileMenuBtn" class="md:hidden text-white focus:outline-none">
+      <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16" />
+      </svg>
+    </button>
+  </div>
+  
+  <!-- Mobile menu -->
+  <div id="mobileMenu" class="fixed inset-0 bg-primary-900 bg-opacity-95 z-50 flex flex-col justify-center items-center hidden transition-all duration-300 ease-in-out">
+    <button id="mobileMenuCloseBtn" class="absolute top-5 right-5 text-white">
+      <svg xmlns="http://www.w3.org/2000/svg" class="h-8 w-8" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M6 18L18 6M6 6l12 12" />
+      </svg>
+    </button>
+    
+    <nav>
+      <ul class="flex flex-col space-y-6 text-center">
+        <li><a href="#features" class="text-white text-2xl hover:text-primary-300 transition-colors duration-200">Ciri-ciri</a></li>
+        <li><a href="#benefits" class="text-white text-2xl hover:text-primary-300 transition-colors duration-200">Kelebihan</a></li>
+        <li><a href="#testimonials" class="text-white text-2xl hover:text-primary-300 transition-colors duration-200">Testimoni</a></li>
+        <li><a href="#faq" class="text-white text-2xl hover:text-primary-300 transition-colors duration-200">Soalan Lazim</a></li>
+        <li><a href="#contact" class="text-white text-2xl hover:text-primary-300 transition-colors duration-200">Hubungi Kami</a></li>
+      </ul>
+    </nav>
+  </div>
+</header>
+
+<script>
+  const mobileMenuBtn = document.getElementById('mobileMenuBtn');
+  const mobileMenuCloseBtn = document.getElementById('mobileMenuCloseBtn');
+  const mobileMenu = document.getElementById('mobileMenu');
+  const mobileMenuLinks = document.querySelectorAll('#mobileMenu a');
+  const header = document.querySelector('header');
+  
+  // Handle mobile menu
+  mobileMenuBtn.addEventListener('click', () => {
+    mobileMenu.classList.remove('hidden');
+    document.body.style.overflow = 'hidden';
+  });
+  
+  mobileMenuCloseBtn.addEventListener('click', () => {
+    mobileMenu.classList.add('hidden');
+    document.body.style.overflow = 'auto';
+  });
+  
+  mobileMenuLinks.forEach(link => {
+    link.addEventListener('click', () => {
+      mobileMenu.classList.add('hidden');
+      document.body.style.overflow = 'auto';
+    });
+  });
+
+  // Handle header background on scroll
+  let lastScroll = 0;
+  window.addEventListener('scroll', () => {
+    const currentScroll = window.pageYOffset;
+    
+    if (currentScroll <= 0) {
+      header.classList.remove('py-2');
+      header.classList.add('py-4');
+    } else {
+      header.classList.add('py-2');
+      header.classList.remove('py-4');
+    }
+    
+    lastScroll = currentScroll;
+  });
+</script>

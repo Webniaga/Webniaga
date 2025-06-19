@@ -1,0 +1,25 @@
+---
+import Layout from '../layouts/Layout.astro';
+import Header from '../components/Header.astro';
+import Hero from '../components/Hero.astro';
+import Features from '../components/Features.astro';
+import Benefits from '../components/Benefits.astro';
+import Testimonials from '../components/Testimonials.astro';
+import CallToAction from '../components/CallToAction.astro';
+import Contact from '../components/Contact.astro';
+import FAQ from '../components/FAQ.astro';
+
+const title = "Webniaga.my - Perniagaan Dalam Talian";
+const description = "Platform e-dagang yang memudahkan perniagaan dalam talian anda.";
+---
+
+<Layout title={title} description={description}>
+  <Header />
+  <Hero />
+  <Features />
+  <Benefits />
+  <Testimonials />
+  <FAQ />
+  <CallToAction />
+  <Contact />
+</Layout>
