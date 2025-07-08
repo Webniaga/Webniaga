@@ -104,7 +104,7 @@ const formattedDate = article.data.date.toLocaleDateString('ms-MY', {
 
         <!-- Article Body -->
         <div class="bg-white rounded-3xl shadow-card p-8 lg:p-12">
-          <div class="prose prose-lg max-w-none text-gray-700 prose-headings:text-gray-900 prose-headings:font-bold prose-h1:text-3xl prose-h1:mb-8 prose-h1:leading-tight prose-h2:text-2xl prose-h2:mt-12 prose-h2:mb-6 prose-h2:text-primary-700 prose-h3:text-xl prose-h3:mt-8 prose-h3:mb-4 prose-h3:text-gray-800 prose-p:mb-6 prose-p:leading-relaxed prose-p:text-gray-600 prose-strong:text-primary-600 prose-strong:font-semibold prose-a:text-primary-600 prose-a:no-underline hover:prose-a:underline prose-blockquote:border-l-4 prose-blockquote:border-primary-200 prose-blockquote:bg-primary-50 prose-blockquote:p-6 prose-blockquote:rounded-r-lg prose-blockquote:my-8 prose-table:border-collapse prose-table:my-8 prose-table:shadow-sm prose-table:rounded-lg prose-table:overflow-hidden prose-th:bg-primary-50 prose-th:border prose-th:border-gray-200 prose-th:p-4 prose-th:font-semibold prose-th:text-primary-700 prose-td:border prose-td:border-gray-200 prose-td:p-4 prose-ul:my-6 prose-ol:my-6 prose-li:mb-3 prose-img:rounded-2xl prose-img:shadow-lg prose-img:my-8">
+          <div class="article-content prose prose-lg max-w-none text-gray-700 prose-headings:text-gray-900 prose-headings:font-bold prose-h1:text-3xl prose-h1:mb-8 prose-h1:leading-tight prose-h2:text-2xl prose-h2:mt-12 prose-h2:mb-6 prose-h2:text-primary-700 prose-h3:text-xl prose-h3:mt-8 prose-h3:mb-4 prose-h3:text-gray-800 prose-p:mb-6 prose-p:leading-relaxed prose-p:text-gray-600 prose-strong:text-primary-600 prose-strong:font-semibold prose-a:text-primary-600 prose-a:no-underline hover:prose-a:underline prose-blockquote:border-l-4 prose-blockquote:border-primary-200 prose-blockquote:bg-primary-50 prose-blockquote:p-6 prose-blockquote:rounded-r-lg prose-blockquote:my-8 prose-ul:my-6 prose-ol:my-6 prose-li:mb-3 prose-img:rounded-2xl prose-img:shadow-lg prose-img:my-8">
             <Content />
           </div>
         </div>
@@ -138,6 +138,98 @@ const formattedDate = article.data.date.toLocaleDateString('ms-MY', {
 </Layout>
 
 <style>
+  /* Mobile responsive table wrapper */
+  .article-content :global(table) {
+    width: 100%;
+    margin: 2rem 0;
+    border-radius: 0.5rem;
+    overflow: hidden;
+    box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1);
+    border-collapse: collapse;
+  }
+  
+  .article-content :global(th),
+  .article-content :global(td) {
+    border: 1px solid #e5e7eb;
+    padding: 1rem;
+    text-align: left;
+    vertical-align: top;
+  }
+  
+  .article-content :global(th) {
+    background: linear-gradient(135deg, #f0f9ff 0%, #e0f2fe 100%);
+    font-weight: 600;
+    color: #0369a1;
+  }
+  
+  .article-content :global(td) {
+    background: white;
+  }
+  
+  /* Mobile responsive table */
+  @media (max-width: 768px) {
+    .article-content :global(table) {
+      font-size: 0.875rem;
+    }
+    
+    .article-content :global(th),
+    .article-content :global(td) {
+      padding: 0.75rem 0.5rem;
+    }
+    
+    /* Stack table cells vertically on very small screens */
+    @media (max-width: 480px) {
+      .article-content :global(table),
+      .article-content :global(thead),
+      .article-content :global(tbody),
+      .article-content :global(th),
+      .article-content :global(td),
+      .article-content :global(tr) {
+        display: block;
+      }
+      
+      .article-content :global(thead tr) {
+        position: absolute;
+        top: -9999px;
+        left: -9999px;
+      }
+      
+      .article-content :global(tr) {
+        border: 1px solid #e5e7eb;
+        margin-bottom: 1rem;
+        border-radius: 0.5rem;
+        overflow: hidden;
+        background: white;
+        box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+      }
+      
+      .article-content :global(td) {
+        border: none;
+        border-bottom: 1px solid #f3f4f6;
+        position: relative;
+        padding: 0.75rem 1rem;
+        padding-left: 40%;
+        text-align: left;
+      }
+      
+      .article-content :global(td:before) {
+        content: attr(data-label);
+        position: absolute;
+        left: 1rem;
+        width: 35%;
+        padding-right: 0.5rem;
+        white-space: nowrap;
+        font-weight: 600;
+        color: #374151;
+        top: 0.75rem;
+      }
+      
+      .article-content :global(td:last-child) {
+        border-bottom: none;
+      }
+    }
+  }
+  
   /* Custom prose styles for better readability */
   .prose img {
     width: 100%;
@@ -175,20 +267,6 @@ const formattedDate = article.data.date.toLocaleDateString('ms-MY', {
     font-style: italic;
     font-size: 1.1em;
     color: #0369a1;
-  }
-  
-  .prose table {
-    width: 100%;
-    margin: 2rem 0;
-    border-radius: 0.5rem;
-    overflow: hidden;
-    box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1);
-  }
-  
-  .prose th {
-    font-weight: 600;
-    text-align: left;
-    background: linear-gradient(135deg, #f0f9ff 0%, #e0f2fe 100%);
   }
   
   .prose code {

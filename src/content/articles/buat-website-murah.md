@@ -52,16 +52,16 @@ tags: ["website murah", "malaysia", "wordpress", "freelancer", "web design"]
 <h3>Statistik Menarik</h3>
 <table>
 <tr>
-<th>Fakta</th><th>Data</th>
+<th data-label="Fakta">Fakta</th><th data-label="Data">Data</th>
 </tr>
 <tr>
-<td>Pengguna internet di Malaysia</td><td>90% (lebih 30 juta)</td>
+<td data-label="Fakta">Pengguna internet di Malaysia</td><td data-label="Data">90% (lebih 30 juta)</td>
 </tr>
 <tr>
-<td>Pengguna mobile</td><td>75%</td>
+<td data-label="Fakta">Pengguna mobile</td><td data-label="Data">75%</td>
 </tr>
 <tr>
-<td>Bisnes yang ada website</td><td>Berpotensi naik 30% jualan</td>
+<td data-label="Fakta">Bisnes yang ada website</td><td data-label="Data">Berpotensi naik 30% jualan</td>
 </tr>
 </table>
 
@@ -90,9 +90,9 @@ tags: ["website murah", "malaysia", "wordpress", "freelancer", "web design"]
 
 <h4>Anggaran kos:</h4>
 <table>
-<tr><th>Item</th><th>Kos (bulanan)</th></tr>
-<tr><td>Wix Basic Plan</td><td>RM30-40</td></tr>
-<tr><td>Shopify (untuk e-commerce)</td><td>RM100-300</td></tr>
+<tr><th data-label="Item">Item</th><th data-label="Kos">Kos (bulanan)</th></tr>
+<tr><td data-label="Item">Wix Basic Plan</td><td data-label="Kos">RM30-40</td></tr>
+<tr><td data-label="Item">Shopify (untuk e-commerce)</td><td data-label="Kos">RM100-300</td></tr>
 </table>
 
 <hr>
@@ -105,11 +105,11 @@ tags: ["website murah", "malaysia", "wordpress", "freelancer", "web design"]
 
 <h4>Anggaran kos tahunan:</h4>
 <table>
-<tr><th>Item</th><th>Kos (setahun)</th></tr>
-<tr><td>Domain (.com)</td><td>RM50-70</td></tr>
-<tr><td>Hosting basic</td><td>RM100-200</td></tr>
-<tr><td>Tema premium (optional)</td><td>RM100-300</td></tr>
-<tr><td>Plugin premium (optional)</td><td>RM50-200</td></tr>
+<tr><th data-label="Item">Item</th><th data-label="Kos">Kos (setahun)</th></tr>
+<tr><td data-label="Item">Domain (.com)</td><td data-label="Kos">RM50-70</td></tr>
+<tr><td data-label="Item">Hosting basic</td><td data-label="Kos">RM100-200</td></tr>
+<tr><td data-label="Item">Tema premium (optional)</td><td data-label="Kos">RM100-300</td></tr>
+<tr><td data-label="Item">Plugin premium (optional)</td><td data-label="Kos">RM50-200</td></tr>
 </table>
 
 <p>Total boleh mula <strong>serendah ~RM200–300 setahun</strong> kalau guna tema & plugin percuma.</p>
