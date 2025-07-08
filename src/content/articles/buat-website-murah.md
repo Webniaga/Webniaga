@@ -1,3 +1,10 @@
+---
+title: "Buat Website Murah Malaysia: Panduan Lengkap 2025"
+description: "Panduan lengkap cara buat website murah di Malaysia dengan bajet rendah. Pilihan platform, kos anggaran, dan tips untuk website profesional tanpa belanja besar."
+keyword: "buat website murah, website murah, malaysia, wordpress, freelancer, bajet"
+date: 2025-01-01T00:00:00Z
+---
+
 <!DOCTYPE html>
 <html lang="ms">
 <head>
