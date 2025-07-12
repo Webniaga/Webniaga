@@ -1,10 +1,8 @@
 ---
+import Layout from '../layouts/Layout.astro';
 import { getCollection } from 'astro:content';
-import Layout from '../../layouts/Layout.astro';
 
 const articles = await getCollection('articles');
-
-// Sort articles by date, newest first
 articles.sort((a, b) => b.data.date.getTime() - a.data.date.getTime());
 
 const pageTitle = "Artikel & Panduan Website - Webniaga.my";
@@ -19,18 +17,6 @@ const pageDescription = "Koleksi artikel dan panduan terkini mengenai cara buat 
       <div class="absolute top-20 left-10 w-32 h-32 bg-white rounded-full blur-xl"></div>
       <div class="absolute bottom-20 right-10 w-24 h-24 bg-white rounded-full blur-xl"></div>
       <div class="absolute top-1/2 left-1/4 w-16 h-16 bg-white rounded-full blur-xl"></div>
-    </div>
-    
-    <!-- Animated grid pattern -->
-    <div class="absolute inset-0 opacity-5">
-      <svg width="100%" height="100%">
-        <defs>
-          <pattern id="article-grid" width="60" height="60" patternUnits="userSpaceOnUse">
-            <path d="M 60 0 L 0 0 0 60" fill="none" stroke="currentColor" stroke-width="1"/>
-          </pattern>
-        </defs>
-        <rect width="100%" height="100%" fill="url(#article-grid)" class="text-white" />
-      </svg>
     </div>
     
     <div class="container mx-auto px-4 relative z-10">
@@ -81,7 +67,7 @@ const pageDescription = "Koleksi artikel dan panduan terkini mengenai cara buat 
           
           <!-- Articles Grid -->
           <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-8 max-w-7xl mx-auto">
-            {articles.map((article, index) => (
+            {articles.map((article) => (
               <article class="group bg-white rounded-3xl shadow-card hover:shadow-2xl transition-all duration-500 hover:-translate-y-3 border border-gray-100 flex flex-col overflow-hidden">
                 <!-- Article Header -->
                 <div class="p-8 flex-grow">
@@ -125,7 +111,7 @@ const pageDescription = "Koleksi artikel dan panduan terkini mengenai cara buat 
                 <!-- Article Footer -->
                 <div class="p-8 pt-0">
                   <a 
-                    href={`/articles/${article.slug}`} 
+                    href={`/article/${article.slug}`} 
                     class="inline-flex items-center justify-center w-full bg-primary-600 text-white font-semibold py-3 px-6 rounded-2xl hover:bg-primary-700 transition-all duration-300 hover:scale-105 transform group-hover:shadow-lg"
                   >
                     Baca Artikel Penuh

@@ -34,18 +34,6 @@ const readingTime = Math.ceil(article.body.length / 1000) || 5;
       <div class="absolute top-1/2 left-1/4 w-16 h-16 bg-white rounded-full blur-xl"></div>
     </div>
     
-    <!-- Animated grid pattern -->
-    <div class="absolute inset-0 opacity-5">
-      <svg width="100%" height="100%">
-        <defs>
-          <pattern id="article-detail-grid" width="60" height="60" patternUnits="userSpaceOnUse">
-            <path d="M 60 0 L 0 0 0 60" fill="none" stroke="currentColor" stroke-width="1"/>
-          </pattern>
-        </defs>
-        <rect width="100%" height="100%" fill="url(#article-detail-grid)" class="text-white" />
-      </svg>
-    </div>
-    
     <div class="container mx-auto px-4 relative z-10">
       <!-- Breadcrumb -->
       <nav class="flex items-center space-x-2 text-sm text-primary-200 mb-8">
