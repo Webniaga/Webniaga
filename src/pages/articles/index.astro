@@ -1,7 +1,6 @@
 ---
 import { getCollection } from 'astro:content';
 import Layout from '../../layouts/Layout.astro';
-import Header from '../../components/Header.astro';
 
 const articles = await getCollection('articles');
 
@@ -13,8 +12,6 @@ const pageDescription = "Koleksi artikel dan panduan terkini mengenai cara buat 
 ---
 
 <Layout title={pageTitle} description={pageDescription}>
-  <Header />
-  
   <!-- Hero Section -->
   <section class="pt-24 pb-16 bg-gradient-to-br from-primary-600 to-primary-800 text-white relative overflow-hidden">
     <div class="absolute inset-0 opacity-10">
